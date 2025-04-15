@@ -1,18 +1,91 @@
-# Projet d'Analyse de Sentiment Multiclasse avec BERT
+# BERT Fine-Tuned for Emotion Classification
 
-## Aperçu
-Ce projet vise à implémenter et fine-tuner un modèle BERT pour l'analyse de sentiment multiclasse. L'objectif est de classifier des textes courts (comme des tweets ou des commentaires) dans trois catégories de sentiment : négatif (0), neutre (1) et positif (2).
+This project fine-tunes a BERT-based model (XLM-Roberta) for emotion classification on short texts or tweets. The pipeline includes data preprocessing, tokenization, model training, and performance evaluation.
 
-## Dataset
-Le dataset utilisé est "multiclass-sentiment-analysis-dataset" de Sp1786, qui contient des textes courts annotés avec leur sentiment correspondant. 
+## Table of Contents
+- [Description](#description)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Results](#results)
 
-Caractéristiques du dataset:
-- **Format**: CSV
-- **Colonnes principales**: 'text' (le texte) et 'label' (le sentiment)
-- **Classes**: 
-  - 0: Sentiment négatif
-  - 1: Sentiment neutre
-  - 2: Sentiment positif
-- **Taille**: Plus de 31 000 entrées
 
-## Structure du Projet
+---
+
+## Description
+
+This project leverages the `XLM-Roberta` model to classify emotions in text. The main steps include:
+1. Data cleaning and exploration.
+2. Preparing data for training.
+3. Fine-tuning the `XLM-Roberta` model on a labeled dataset.
+4. Evaluating the model's performance.
+
+---
+
+## Prerequisites
+
+- Python 3.12 or later
+- GPU with CUDA support (optional but recommended for training)
+- Python libraries:
+  - `transformers`
+  - `torch`
+  - `datasets`
+  - `scikit-learn`
+  - `pandas`
+  - `numpy`
+  - `matplotlib`
+  - `seaborn`
+
+---
+
+## Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/BERT-fine-tuned.git
+   cd BERT-fine-tuned
+
+## Create and activate a virtual environment:
+
+  python3 -m venv venv
+  source venv/bin/activate
+
+## Install the required dependencies:
+  pip install -r requirements.txt
+
+## Usage
+
+  1. Prepare the Dataset
+      
+    - Place your dataset in a CSV file named dataset.csv in the root directory.
+    - The file should contain two main columns:
+        - text: The text to classify.
+        - label: The associated label (e.g., 0 = negative, 1 = neutral, 2 = positive).
+
+  2. Train the Model
+
+      - Open and run the NPL_emotions_classification.ipynb notebook to fine-tune the model.
+
+  3. Evaluate the Model
+      - The notebook includes evaluation metrics such as accuracy, precision, recall, and F1-score.
+
+## Project Structure
+
+└── BERT-fine-tuned
+    ├── data_cleaning.ipynb
+    ├── dataset.csv
+    ├── NPL_emotions_classification.ipynb
+    └── README.md
+
+## Results
+
+The fine-tuned model achieves the following metrics on the test set:
+
+  Accuracy: 90%
+  Precision: 88%
+  Recall: 89%
+  F1-Score: 88.5%
+
+
+Made by Adam Akherraz
