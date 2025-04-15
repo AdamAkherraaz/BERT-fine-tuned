@@ -1,0 +1,29 @@
+# Ignorer les environnements virtuels
+venv/
+.env/
+
+# Ignorer les fichiers de checkpoints et résultats
+results/
+*.pt
+*.bin
+
+# Ignorer les fichiers temporaires et caches
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.ipynb_checkpoints/
+
+# Ignorer les fichiers spécifiques à Jupyter Notebook
+*.nbconvert.ipynb
+*.checkpoint
+
+# Ignorer les fichiers spécifiques à l'OS
+.DS_Store
+Thumbs.db
+
+# Ignorer les fichiers spécifiques à Git
+.git/
+
+# Ignorer les fichiers de configuration locaux
+*.env
