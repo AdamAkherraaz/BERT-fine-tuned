@@ -72,11 +72,11 @@ This project leverages the `XLM-Roberta` model to classify emotions in text. The
 
 ## Project Structure
 
-└── BERT-fine-tuned
-    ├── data_cleaning.ipynb
-    ├── dataset.csv
-    ├── NPL_emotions_classification.ipynb
-    └── README.md
+BERT-fine-tuned
+  ── data_cleaning.ipynb
+  ── dataset.csv
+  ── NPL_emotions_classification.ipynb
+  ── README.md
 
 ## Results
 
