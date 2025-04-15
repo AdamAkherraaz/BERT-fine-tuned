@@ -73,19 +73,19 @@ This project leverages the `XLM-Roberta` model to classify emotions in text. The
 ## Project Structure
 
 BERT-fine-tuned
-  ── data_cleaning.ipynb
-  ── dataset.csv
-  ── NPL_emotions_classification.ipynb
-  ── README.md
+  - data_cleaning.ipynb
+  - dataset.csv
+  - NPL_emotions_classification.ipynb
+  - README.md
 
 ## Results
 
 The fine-tuned model achieves the following metrics on the test set:
 
-  Accuracy: 90%
-  Precision: 88%
-  Recall: 89%
-  F1-Score: 88.5%
+  Accuracy: 75%
+  Precision: 75%
+  Recall: 75%
+  F1-Score: 75%
 
 
 Made by Adam Akherraz
